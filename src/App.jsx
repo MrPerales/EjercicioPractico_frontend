@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-red-500">Holi</h1>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </HashRouter>
     </>
   );
 }
