@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Card({ articulo }) {
   const navigate = useNavigate();
   const goToArticule = () => {
-    navigate(`/articuloDetail?id=${articulo.id}`);
+    navigate(`/articuloDetail/${articulo.id}`);
   };
   return (
     <div
