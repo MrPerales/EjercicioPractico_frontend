@@ -1,22 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Card from "../../components/Card";
+import React from "react";
+import ArticuloDetail from "../../components/ArticuloDetail";
 
-export default function HomePage() {
-  const [articulos, setArticulos] = useState();
-  console.log(articulos);
-  const urlApi = "http://localhost/EjercicioPractico/index.php/restarticulos";
-  useEffect(() => {
-    fetch(urlApi)
-      .then((resp) => resp.json())
-      .then(({ data, _ }) => setArticulos(data));
-  }, []);
-
+export default function Articule() {
   return (
-    <div className="w-full flex flex-row flex-wrap justify-center items-center space-x-2 space-y-2">
-      {articulos?.map((articulo) => (
-        <Card articulo={articulo} key={articulo.id} />
-      ))}
-    </div>
+    <>
+      <ArticuloDetail></ArticuloDetail>
+    </>
   );
 }
 
